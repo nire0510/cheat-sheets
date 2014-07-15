@@ -76,4 +76,82 @@
 
 [.height(selector, width)](http://dalekjs.com/docs/assertions.html#meth-height)\*\* - Checks the actual height of an element
 
-[.selected(selector)](http://dalekjs.com/docs/assertions.html#meth-selected) - Determine if an 
+[.selected(selector)](http://dalekjs.com/docs/assertions.html#meth-selected) - Determine if an element, or a :checkbox or :radio elements is currently selected
+
+[.notSelected(selector)](http://dalekjs.com/docs/assertions.html#meth-notSelected) - Determine if an  element, or a :checkbox or :radio elements is currently not selected
+                                                                                                     
+[.enabled(selector, message)](http://dalekjs.com/docs/assertions.html#meth-enabled) - Determine if an element is currently enabled
+
+[.disabled(selector, message)](http://dalekjs.com/docs/assertions.html#meth-disabled) - Determine if an element is currently disabled
+
+[.cookie(name, value)](http://dalekjs.com/docs/assertions.html#meth-cookie) - Checks the contents of a cookie
+
+[.exists(selector)](http://dalekjs.com/docs/assertions.html#meth-exists) - Asserts that an element exists in remote DOM environment
+
+[.doesntExist(selector)](http://dalekjs.com/docs/assertions.html#meth-doesntExist) - Asserts that an element doesn't exist in remote DOM environment
+
+[.notVisible(selector, message)](http://dalekjs.com/docs/assertions.html#meth-notVisible) - Asserts that an element is not visible
+
+[.visible(selector, message)](http://dalekjs.com/docs/assertions.html#meth-visible) - Asserts that an element is visible
+
+[.doesntHaveText(selector, text, message)](http://dalekjs.com/docs/assertions.html#meth-doesntHaveText) - Asserts that given text does not exist in the provided selector
+
+[.dialogDoesntHaveText(text)](http://dalekjs.com/docs/assertions.html#meth-dialogDoesntHaveText) - Asserts that given text does not exist in the current alert/prompt/confirm dialog
+
+[.text(selector, text, message)](http://dalekjs.com/docs/assertions.html#meth-text)\* - Asserts that given text does exist in the provided selector
+
+[.dialogText(text)](http://dalekjs.com/docs/assertions.html#meth-dialogText)\* - Asserts that given alertText does exist in the provided alert/confirm or prompt dialog
+
+[.title(text, message)](http://dalekjs.com/docs/assertions.html#meth-title)\* - Asserts that the page title is as expected
+
+[.doesntHaveTitle(text, message)](http://dalekjs.com/docs/assertions.html#meth-doesntHaveTitle) - Asserts that given title does not match the given expectations
+
+[.url(url, message)](http://dalekjs.com/docs/assertions.html#meth-url)\* - Asserts that the page's url is as expected
+
+[.doesntHaveUrl(url, message)](http://dalekjs.com/docs/assertions.html#meth-doesntHaveUrl) - Asserts that the pages URL does not match the expectation
+
+[.attr(selector, attribute, value)](http://dalekjs.com/docs/assertions.html#meth-attr)\* - Asserts that an elements attribute is as expected
+
+# Assertions - Syntactic Sugar
+
+## Textual assertions \*
+
+.is(value, message) - Asserts that a given test on the page equals to a given value
+
+.is.not(value, message) - Asserts that a given test on the page doesn't equal to a given value
+
+.to.contain(value)- Asserts that a given test on the page contains a given value
+
+## Numerical assertions \*\*
+
+.is(n, message) - Asserts that a given element appears n times on the page
+
+.is.between([m-n], message)- Asserts that a given element appears m-n times on the page
+
+.is.gt(n, message)- Asserts that a given element appears more than n times on the page
+
+.is.gte(n, message)- Asserts that a given element appears at least n times on the page
+
+.is.lt(n, message)- Asserts that a given element appears less than n times on the page
+
+.is.lte(n, message)- Asserts that a given element appears no more than n times on the page
+
+.is.not(n, message)- Asserts that a given element not appears n times on the page
+
+## Screenshots Path Variables
+
+:browser- The browser name (e.g. 'Chrome', 'Safari', 'Firefox', etc.)
+
+:version- The browser version (e.g. '100', '2311\_5', etc.)
+
+:os- The operating system (e.g.OSX,Windows,Linux)
+
+:osVersion- The operating system version (e.gXP,7,10\_8, etc.)
+
+:viewport- The current viewport in pixels (e.g.w1024\_h768)
+
+:timestamp- UNIX like timestapm (e.g.637657345)
+
+:date- Current date in format MMDDYYYY (e.g.12\_24\_2013)
+
+:datetime- Current datetime in format MMDDYYYYHHmm\_ss (e.g.12\_24\_2013\_14\_55\_23) 
