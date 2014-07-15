@@ -1,10 +1,29 @@
 # [DalekJS](http://dalekjs.com/) Cheat Sheet v0.0.8
 
-# Actions
+## Installation
+
+1. Install node
+1. Install globally "DalekJS Command Line Tools" `npm install dalek-cli -g`
+1. Install locally "DalekJS" in your testing directory `npm install dalekjs --save-dev`
+
+## Test script template
+
+```javascript
+module.exports = {
+	'Page title is correct': function (test) {
+  		test
+    		.open('http://google.com')
+    		.assert.title().is('Google', 'It has title')
+    		.done();
+	}
+};
+```
+
+## Actions
 
 [.query/$(selector)](http://dalekjs.com/docs/actions.html#meth-query) - Specifies a selector once for multiple actions or assertions on the same element(s)
 
-.end() - Terminates a query statement
+[.end()](http://dalekjs.com/docs/assertions.html#meth-end) - Terminates a query statement
 
 [.toFrame(selector)](http://dalekjs.com/docs/actions.html#meth-toFrame) - Switches to an iframe context
 
@@ -58,7 +77,7 @@
 
 [.log.message(text)](http://dalekjs.com/docs/actions.html#meth-log.message) - Logs a user defined message
 
-# Assertions
+## Assertions
 
 [.chain()](http://dalekjs.com/docs/assertions.html#meth-chain) - Specifies an assertion once for multiple checks
 
@@ -112,9 +131,9 @@
 
 [.attr(selector, attribute, value)](http://dalekjs.com/docs/assertions.html#meth-attr)\* - Asserts that an elements attribute is as expected
 
-# Assertions - Syntactic Sugar
+## Assertions - Syntactic Sugar
 
-## Textual assertions \*
+### Textual assertions \*
 
 .is(value, message) - Asserts that a given test on the page equals to a given value
 
@@ -122,7 +141,7 @@
 
 .to.contain(value)- Asserts that a given test on the page contains a given value
 
-## Numerical assertions \*\*
+### Numerical assertions \*\*
 
 .is(n, message) - Asserts that a given element appears n times on the page
 
@@ -138,7 +157,7 @@
 
 .is.not(n, message)- Asserts that a given element not appears n times on the page
 
-## Screenshots Path Variables
+### Screenshots Path Variables
 
 :browser- The browser name (e.g. 'Chrome', 'Safari', 'Firefox', etc.)
 
